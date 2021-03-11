@@ -68,7 +68,29 @@ void setServoPulse(uint8_t n, double pulse) {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  Serial.println(servonum);
+   if(Serial.available()){
+        input = Serial.read();
+    }
+  
+  thumb(input);
+}
+  
+  
+  
+  function thumb{
+    thumb(){
+        
+    }
+    setPosition(''){
+      if(a || b ||c ||d ||e){
+          pwm.setPWM(servonum, 0, pulselen);
+      
+    }
+    
+  }
+  
+  
+  { Serial.println(servonum);
   for (uint16_t pulselen = SERVOMIN; pulselen < SERVOMAX; pulselen++) {
     pwm.setPWM(servonum, 0, pulselen);
   }
@@ -80,5 +102,10 @@ void loop() {
 
   delay(500);
   
+  if(servonum < 14)
+    servonum++;
+  else
+    servonum = 0;
+  function indexfinger
 
-}
+
