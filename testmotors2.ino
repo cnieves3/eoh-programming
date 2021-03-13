@@ -75,8 +75,7 @@ void loop() {
   thumb(input);
 }
   
-  
-  
+  change;
   function thumb{
     thumb(){
         
@@ -109,3 +108,4 @@ void loop() {
   function indexfinger
 
 
+hopefully this is only a change to my branch
