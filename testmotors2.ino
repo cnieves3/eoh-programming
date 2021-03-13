@@ -88,7 +88,7 @@ void loop() {
     }
     
   }
-  hello
+  hello world
   
   { Serial.println(servonum);
   for (uint16_t pulselen = SERVOMIN; pulselen < SERVOMAX; pulselen++) {
