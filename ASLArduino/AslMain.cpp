@@ -37,8 +37,13 @@ void finger::setFinger(char input){
 };
 
 void finger::resetFinger(){
+ // int pulselen;
+ // while
   for (int pulselen = SERVOMAX; pulselen > SERVOMIN; pulselen--) {
     pwm.setPWM(servoMotor1, 0, pulselen);
+    pwm.setPWM(servoMotor2, 0, pulselen);
+    if(servoMotor3 != -1)
+      pwm.setPWM(servoMotor2, 0, pulselen);
   }
 };
 
