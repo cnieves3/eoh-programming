@@ -10,7 +10,7 @@ pwm.begin();
   pwm.setPWMFreq(SERVO_FREQ);  // Analog servos run at ~50 Hz updates
 
   delay(10);
-  finger thumb(0,1);
+    finger thumb(0,1);
   thumb.resetFinger();
   }
 //void restart(){
@@ -32,18 +32,25 @@ finger::finger(int first, int second, int third){
 
 void finger::setFinger(char input){
   //if(fingerType == "Thumb")
-   setThumb(input);
+    if(input == 'a'){
+      delay(1000);
+      for(int alength = SERVOMIN; alength< 500; alength++){
+        delay(5);
+        pwm.setPWM(servoMotor2, 0, alength);
+        delay(5);
+      }
+      resetFinger();
+
+
+   }
   
 };
 
 void finger::resetFinger(){
- // int pulselen;
- // while
   for (int pulselen = SERVOMAX; pulselen > SERVOMIN; pulselen--) {
-    pwm.setPWM(servoMotor1, 0, pulselen);
+    delay(5);
     pwm.setPWM(servoMotor2, 0, pulselen);
-    if(servoMotor3 != -1)
-      pwm.setPWM(servoMotor2, 0, pulselen);
+    delay(5);
   }
 };
 
