@@ -32,6 +32,7 @@ class finger{
     int getServoMotor2() const;
 
 
+
   private:   
   int servomotor1 = -1;
   int servomotor2 = -1;

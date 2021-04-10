@@ -18,6 +18,9 @@
 
 //};
 
+    finger::finger(){};
+    finger::finger(int motor1, int motor2):servomotor1(motor1),servomotor2(motor2){};
+    
 int finger::getServoMotor1() const{
   return servomotor1;
 };
@@ -26,13 +29,7 @@ int finger::getServoMotor2() const{
   return servomotor2;
 };
 
-/*int finger::setServoMotor1() const{
-  return servomotor1;
-};
 
-int finger::getServoMotor2() const{
-  return servomotor2;
-};*/
 
 
     
