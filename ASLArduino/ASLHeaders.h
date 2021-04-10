@@ -1,7 +1,10 @@
+#pragma once
+
 #include <string.h>
 // the setup function runs once when you press reset or power the board
 #include <Wire.h>
 #include <Adafruit_PWMServoDriver.h>
+//Adafruit_PWMServoDriver pwm = Adafruit_PWMServoDriver();
 
 // called this way, it uses the default address 0x40
 
@@ -19,18 +22,17 @@ using namespace std;
 class finger{
   public:
 
-    finger(int first, int second);
-    finger(int first, int second, int third);
+    finger();
+    finger(int motor1, int motor2);
 
-    void setFinger(char input);
-    void setThumb(char input);
-    void resetFinger();
+    virtual void setFinger(char input);
+    virtual void resetFinger();
+
+    int getServoMotor1() const;
+    int getServoMotor2() const;
 
 
-  private:
-    int servoMotor1 = -1;
-    int servoMotor2 = -1;
-    int servoMotor3 = -1;
-    //string fingerType; 
-    
+  private:   
+  int servomotor1 = -1;
+  int servomotor2 = -1;
 };
