@@ -1,7 +1,8 @@
 #include "Thumb.h"
 
 
-Thumb::Thumb(int motor1,int motor2, Adafruit_PWMServoDriver & pwm):finger(motor1,motor2),pwm_(pwm){};
+Thumb::Thumb(int motor1,int motor2, Adafruit_PWMServoDriver & pwm):finger(motor1,motor2),pwm_(pwm){
+  };
 
 void Thumb::setFinger(char input){
 
