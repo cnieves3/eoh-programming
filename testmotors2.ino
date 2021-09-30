@@ -75,8 +75,7 @@ void loop() {
   thumb(input);
 }
   
-  
-  
+  change;
   function thumb{
     thumb(){
         
